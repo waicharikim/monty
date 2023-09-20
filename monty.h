@@ -33,4 +33,18 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct file_s - file and contents
+ * @fd: file descriptor
+ * @content: string re from file
+ *
+ * Description: file and contents in the file
+ */
+typedef struct file_s
+{
+	FILE *fd;
+	char *content;
+}file_t
+extern file_t *file_arg
+
 #endif /* MONTY_H */
