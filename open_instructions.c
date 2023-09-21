@@ -10,5 +10,5 @@ void open_instructions(void)
 
 	if (file_arg->token_count == 0)
 		return;
-	file_arg->instructions->f(&stack, file_arg->line_no);
+	file_arg->instruction->f(&stack, file_arg->line_no);
 }

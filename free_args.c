@@ -15,7 +15,7 @@ void free_args(void)
 		file_arg->instruction = NULL;
 	}
 
-	free_stack();
+	free_stack_top();
 
 	if (file_arg->line_content)
 	{
