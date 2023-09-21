@@ -12,7 +12,7 @@ void check_instructions()
 		{"pint", &pint0}, {"pop", &pop},
 		{"swap", &swap}, {"add", &add},
 		{"nop", &nop}, {NULL, NULL}};
-	if (file_arg->tokens == 0)
+	if (file_arg->token_count == 0)
 		return;
 	for (; instructions[i].opcode != NULL; i++)
 	{
