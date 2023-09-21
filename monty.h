@@ -48,7 +48,10 @@ typedef struct instruction_s
 /**
  * struct file_s - file and contents
  * @stream: file stream
- * @content: string re from file
+ * @content: string read from file
+ * @tokens: words tokenized from content
+ * @token_count: no of tokens
+ * @instruction: valid instruction
  *
  * Description: file and contents in the file
  */
@@ -57,6 +60,9 @@ typedef struct file_s
 	FILE *stream;
 	char *line_content;
 	unsigned int line_no;
+	char **tokens;
+	int token_count;
+	instruction_t *instruction;
 }file_t;
 
 extern file_t *file_arg;

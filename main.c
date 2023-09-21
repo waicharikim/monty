@@ -15,10 +15,11 @@ int main(int argc, char **argv)
 	arg_check(argc);
 	file_read(argv[1]);
 
-	for ( ; (getline(&file_arg->line_content, &n, file_arg->stream) != -1); )
+	for (; (getline(&file_arg->line_content, &n, file_arg->stream) != -1); )
 	{
 		file_arg->line_no += 1;
 		printf("%s", file_arg->line_content);
 	}
+	free_args();
 	return (0);
 }
