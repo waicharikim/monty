@@ -66,6 +66,9 @@ typedef struct file_s
 	char **tokens;
 	int token_count;
 	instruction_t *instruction;
+	stack_t *stack_top;
+	int stack_len;
+	int q_or_s;
 }file_t;
 
 extern file_t *file_arg;

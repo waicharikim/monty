@@ -1,3 +1,4 @@
+#include "monty.h"
 /**
  * instructions_error - handles invalid instruction
  *
@@ -6,7 +7,7 @@
 void instructions_error(void)
 {
 	fprintf(stderr, "L%d: unknown instruction %s\n", file_arg->line_no, file_arg->tokens[0]);
-	close_file();
+	file_close();
 	free_tokens();
 	free_args();
 	exit(EXIT_FAILURE);
