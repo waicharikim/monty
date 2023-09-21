@@ -25,6 +25,7 @@ void file_read(char *file_name)
 	if (file_arg->stream == NULL)
 	{
 		close(fd);
+		free_args();
 		file_read_error(file_name);
 	}
 }
