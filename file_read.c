@@ -14,9 +14,13 @@ void file_read(char *file_name)
 	file_arg = malloc(sizeof(file_t));
 	if (file_arg == NULL)
 		malloc_fail();
+	file_arg->instructions = malloc(sizeof(instruction_t));
+	if (file_args->instructions == NULL)
+		malloc_fail();
 	file_arg->stream = NULL;
 	file_arg->line_content = NULL;
 	file_arg->line_no = 0;
+	file_arg->token_count = 0;
 
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
