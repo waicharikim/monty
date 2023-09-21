@@ -17,6 +17,14 @@ void free_args(void);
 void instructions_error(void);
 void tokenizer(void);
 void check_instructions();
+void file_close(void);
+void free_stack(stack_t *top);
+void free_tokens(void);
+int is_digit(char *token);
+void pall(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
+void free_stack_top(void);
+void open_instructions(void);
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
