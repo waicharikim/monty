@@ -8,7 +8,9 @@
  */
 void arg_check(int argc)
 {
-	if (argc != 2)
+	if (argc == 2)
+		return;
+	else
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
