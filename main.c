@@ -25,10 +25,41 @@ void arg_check(int argc)
 	}
 }
 
-char *file_check(char *file_name)
+void file_check(char *file_name)
 {
 	file_arg = malloc(sizeof(file_t));
 	if (file_arg == NULL)
 		malloc_fail();
-	file_arg
+	file_arg->stream = NULL;
+	file_arg->content = NULL;
+}
+
+void file_read(char *file_name)
+{
+	int fd;
+	fd = open(file_name, O_RDONLY);
+	if (fd == -1)
+		file_read_error(file_name);
+	file_arg->stream = fdopen(fd, "r");
+	if (file_arg->stream == "NULL")
+	{
+		close(fd);
+		file_read_error(file_name);
+	}
+}
+void malloc_fail(void)
+{
+	fprintf(stderr, "Error: malloc failed\n");
+	free_args();
+	exit(EXIT_FAILURE);
+}
+
+void free_args(void)
+{
+	free(file_arg);
+}
+
+void file_read_error(char *file_name)
+{
+	fprintf(stderr," Error: Can't open file %s\n", file_name)
 }

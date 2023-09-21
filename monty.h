@@ -35,7 +35,7 @@ typedef struct instruction_s
 
 /**
  * struct file_s - file and contents
- * @fd: file descriptor
+ * @stream: file stream
  * @content: string re from file
  *
  * Description: file and contents in the file
