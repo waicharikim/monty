@@ -1,8 +1,11 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _GNU_SOURCE
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -42,10 +45,11 @@ typedef struct instruction_s
  */
 typedef struct file_s
 {
-	FILE *fd;
+	FILE *stream;
 	char *line_content;
 	unsigned int line_no;
-}file_t
-extern file_t *file_arg
+}file_t;
+
+extern file_t *file_arg;
 
 #endif /* MONTY_H */
