@@ -1,7 +1,19 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _GNU_SOURCE
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+
+/*function prototypes*/
+
+void arg_check(int argc);
+void file_read(char *);
+void malloc_fail(void);
+void file_read_error(char *);
+void free_args(void);
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -32,5 +44,21 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+ * struct file_s - file and contents
+ * @stream: file stream
+ * @content: string re from file
+ *
+ * Description: file and contents in the file
+ */
+typedef struct file_s
+{
+	FILE *stream;
+	char *line_content;
+	unsigned int line_no;
+}file_t;
+
+extern file_t *file_arg;
 
 #endif /* MONTY_H */
