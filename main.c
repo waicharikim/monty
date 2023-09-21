@@ -13,6 +13,8 @@ int main(int argc, char __attribute__((unused)) **argv)
 {
 	arg_check(argc);
 	file_check(argv[1]);
+	file_read(argv[1]);
+	
 	return 0;
 }
 
@@ -31,7 +33,7 @@ void file_check(char *file_name)
 	if (file_arg == NULL)
 		malloc_fail();
 	file_arg->stream = NULL;
-	file_arg->content = NULL;
+	file_arg->line_content = NULL;
 }
 
 void file_read(char *file_name)
@@ -61,5 +63,6 @@ void free_args(void)
 
 void file_read_error(char *file_name)
 {
-	fprintf(stderr," Error: Can't open file %s\n", file_name)
+	fprintf(stderr," Error: Can't open file %s\n", file_name);
+	exit(EXIT_FAILURE);
 }

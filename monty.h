@@ -43,7 +43,8 @@ typedef struct instruction_s
 typedef struct file_s
 {
 	FILE *fd;
-	char *content;
+	char *line_content;
+	unsigned int line_no;
 }file_t
 extern file_t *file_arg
 
