@@ -1,0 +1,13 @@
+#include "monty.h"
+/**
+ * free_stack - frees stack
+ *
+ * Return: void
+ */
+void free_stack(void)
+{
+	if (argument->stackHead)
+		free_stack(argument->stackHead);
+
+	argument->stackHead = NULL;
+}
