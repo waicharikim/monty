@@ -14,6 +14,9 @@ void file_read(char *);
 void malloc_fail(void);
 void file_read_error(char *);
 void free_args(void);
+void instructions_error(void);
+void tokenizer(void);
+void check_instructions();
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
