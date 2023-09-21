@@ -21,6 +21,9 @@ void file_read(char *file_name)
 	file_arg->line_content = NULL;
 	file_arg->line_no = 0;
 	file_arg->token_count = 0;
+	file_arg->stack_len = 0;
+	file_arg->stack_top = NULL;
+	file_arg->q_or_s = 1;
 
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
