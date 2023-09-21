@@ -1,3 +1,5 @@
+#include "monty.h"
+
 /**
  *arg_check - checks args passed to monty
  *@argc: arg count

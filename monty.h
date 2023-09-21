@@ -6,6 +6,15 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+
+/*function prototypes*/
+
+void arg_check(int argc);
+void file_read(char *);
+void malloc_fail(void);
+void file_read_error(char *);
+void free_args(void);
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
