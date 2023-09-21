@@ -11,7 +11,7 @@ void pall(stack_t **stack, unsigned int line_number)
 		return;
 	(void) line_number;
 	(void) stack;
-	tmp = file_arg->stack-top;
+	tmp = file_arg->stack_top;
 	while (tmp != NULL)
 	{
 		printf("%d\n", tmp->n);
