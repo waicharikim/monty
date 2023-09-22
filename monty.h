@@ -42,8 +42,7 @@ typedef struct instruction_s
  * struct file_s - file and contents
  * @stream: file stream
  * @content: string read from file
- * @tokens: words tokenized from content
- * @token_count: no of tokens
+ * @tokens: words tokenized from conte * @token_count: no of tokens
  * @instruction: valid instruction
  *
  * Description: file and contents in the file
