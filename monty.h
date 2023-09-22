@@ -8,6 +8,32 @@
 #include <string.h>
 #include <stddef.h>
 
+/*function prototypes*/
+
+void arg_check(int argc);
+void file_read(char *);
+void malloc_fail(void);
+void file_read_error(char *);
+void free_args(void);
+void instructions_error(void);
+void tokenizer(void);
+void check_instructions();
+void file_close(void);
+void free_stack(stack_t *top);
+void free_tokens(void);
+int is_digit(char *token);
+void pall(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
+void free_stack_top(void);
+void open_instructions(void);
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void delete_node(void);
+void nop(stack_t **stack, unsigned int line_number);
+void free_all(void);
+void pint(stack_t **stack, unsigned int line_number);
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
