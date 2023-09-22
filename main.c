@@ -18,8 +18,12 @@ int main(int argc, char **argv)
 	for (; (getline(&file_arg->line_content, &n, file_arg->stream) != -1); )
 	{
 		file_arg->line_no += 1;
-		printf("%s", file_arg->line_content);
+		tokenizer();
+		check_instructions();
+		open_instructions();
+		free_tokens();
 	}
+	file_close();
 	free_args();
 	return (0);
 }
