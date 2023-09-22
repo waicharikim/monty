@@ -14,8 +14,8 @@ void file_read(char *file_name)
 	file_arg = malloc(sizeof(file_t));
 	if (file_arg == NULL)
 		malloc_fail();
-	file_arg->instructions = malloc(sizeof(instruction_t));
-	if (file_args->instructions == NULL)
+	file_arg->instruction = malloc(sizeof(instruction_t));
+	if (file_arg->instruction == NULL)
 		malloc_fail();
 	file_arg->stream = NULL;
 	file_arg->line_content = NULL;
