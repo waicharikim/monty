@@ -7,7 +7,7 @@
 void free_tokens(void)
 {
 	int i = 0;
-	if (file_arg->tokens == NULL)
+	if (free_args->tokens == NULL)
 		return;
 	while (file_arg->tokens[i])
 	{
