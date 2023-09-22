@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * free_stack_top - Frees the memory allocated for the stack_top
  *
