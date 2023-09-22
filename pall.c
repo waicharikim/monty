@@ -1,3 +1,4 @@
+#include "monty.h"
 /**
  * pall - Prints all the elements in the stack.
  * @stack: Pointer to the stack.

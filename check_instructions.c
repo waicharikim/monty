@@ -9,7 +9,7 @@ void check_instructions()
 	int i = 0;
 	instruction_t instructions[] = {
 		{"push", &push}, {"pall", &pall},
-		{"pint", &pint0}, {"pop", &pop},
+		{"pint", &pint}, {"pop", &pop},
 		{"swap", &swap}, {"add", &add},
 		{"nop", &nop}, {NULL, NULL}
 	};

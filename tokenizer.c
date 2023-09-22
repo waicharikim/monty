@@ -7,6 +7,7 @@
  */
 void tokenizer(void)
 {
+	int i = 0;
 	char *delimiter = " \n", *token = NULL, *content2 = NULL;
 
 	content2 = malloc(sizeof(char) * (strlen(file_arg->line_content) + 1));
@@ -30,6 +31,6 @@ void tokenizer(void)
 		token = strtok(NULL, delimiter);
 		i++;
 	}
-	file_arg->token[i] = NULL;
+	file_arg->tokens[i] = NULL;
 	free(content2);
 }
