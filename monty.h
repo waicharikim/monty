@@ -25,6 +25,14 @@ void pall(stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
 void free_stack_top(void);
 void open_instructions(void);
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void delete_node(void);
+void nop(stack_t __attribute__((unused)) **stack,
+		         unsigned int __attribute__((unused)) line_number);
+void free_all(void);
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
