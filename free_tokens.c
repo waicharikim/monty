@@ -4,7 +4,7 @@
  *
  * Return: void
  */
-void free_tokens(void);
+void free_tokens(void)
 {
 	int i = 0;
 	if (free_arg->tokens == NULL)
