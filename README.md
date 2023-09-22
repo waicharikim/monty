@@ -1,5 +1,7 @@
 the monty interpreter - interprets monty bitecode files
 
+made by JACKLINE AMWENYA & KIMANI WAICHARI
+
 DATA STRUCTURES USED
 
 /**
@@ -54,5 +56,9 @@ typedef struct instruction_s
 	- add : adds the two upper-most elements of the stack
 
 5. nop - implementation of the nop opcode
+<<<<<<< HEAD
 	- nop : does not do anything
 
+=======
+	- nop : does not do anything
+>>>>>>> master
