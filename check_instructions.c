@@ -7,11 +7,12 @@
 void check_instructions()
 {
 	int i = 0;
-	instruction_t instructions[] =
-		{{"push", &push}, {"pall", &pall}'
+	instruction_t instructions[] = {
+		{"push", &push}, {"pall", &pall}'
 		{"pint", &pint0}, {"pop", &pop},
 		{"swap", &swap}, {"add", &add},
-		{"nop", &nop}, {NULL, NULL}};
+		{"nop", &nop}, {NULL, NULL}
+	};
 	if (file_arg->token_count == 0)
 		return;
 	for (; instructions[i].opcode != NULL; i++)

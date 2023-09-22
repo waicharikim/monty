@@ -26,7 +26,7 @@ void push(stack_t **stack, unsigned int line_number)
 	{
 		if (file_arg->q_or_s)
 		{
-			(*stack)->next = line_arg->stack_top;
+			(*stack)->next = file_arg->stack_top;
 			file_arg->stack_top->prev = *stack;
 			file_arg->stack_top = *stack;
 		}
