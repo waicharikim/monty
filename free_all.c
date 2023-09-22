@@ -1,3 +1,4 @@
+#include "monty.h"
 /**
  * free_all - Frees all allocated memory
  */

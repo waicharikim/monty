@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+#include <stddef.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -84,6 +85,9 @@ void delete_node(void);
 void file_close(void);
 void free_all(void);
 void free_stack_top(void);
-
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack,unsigned int line_number);
 
 #endif /* MONTY_H */
